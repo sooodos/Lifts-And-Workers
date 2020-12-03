@@ -12,6 +12,7 @@
 Planning Domain Definition Language solution for a fun problem about workers using elevators
 
 ## Concept
+https://en.wikipedia.org/wiki/Planning_Domain_Definition_Language
 
 ## Domain
 ### Predicates. 
