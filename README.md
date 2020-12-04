@@ -129,4 +129,4 @@ Below the trace of LAMA PLANNER is shown.
 
 ## Execution
 The easiest way to try this out is from some online pddl editor
-You can try this one http://editor.planning.domains/ or one of your choice. You have to give as the domain the domain file and as a proble file one of the problem files give or create your own problem file!
+You can try this one http://editor.planning.domains/ or one of your choice. You have to give as the domain the domain file and as a problem file one of the problem files give or create your own problem file!
