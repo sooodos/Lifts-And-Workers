@@ -4,8 +4,8 @@
 * [Description](#description)
 * [Concept](#concept)
 * [Domain](#domain)
-* [Problem 1](#pb1)
-* [Problem 2](#pb2)
+* [Problem-1](#problem-1)
+* [Problem-2](#problem-2)
 * [Execution](#execution)
 
 ## Description
@@ -42,7 +42,7 @@ Let’s walk through the logic of putting a worker to a fast elevator (action pu
 Lastly, we have the actions responsible for reaching our goal floors, meaning taking the worker out of the elevator when he reaches a floor which is pre-declared as a goal floor. Let’s walk through the logic of putting a worker from a fast elevator to a goal floor (action put_worker_from_fast_in_floor). For parameters we need the fast elevator, the worker and the floor. The preconditions are that the worker is indeed in that elevator and that the elevator is indeed in the potential goal floor. We do not check as a precondition that that floor is goal floor since we give this program to a solver but we could possibly create another predicate identical to wAgoal and pre-declare all goal states so that the elevator will only stop if it is indeed a goal state of a worker but there was no real need to do that. The effect is that we put the worker at a goal state. If that worker is indeed at a goal state, the predicate will be turned to true and have one less worker to worry about AND remove that worker from the elevator. 
 
 
-## Problem 1
+## Problem-1
 In this problem we have 11 floors, 4 workers 2 fast elevators and 2 slow elevators. We firstly initialize the positions of the elevators. All elevators are initially in floor f0. Then we initialize the positions of the workers. w1 in f0,w2 in f2, w3 in f5, w4 in f7. The isNext predicate is used to let the domain know which floor follows the move of a slow elevator. isNext10 is used to let the domain know which floor follows after the move of a fast elevator. In the case of problem1 the fast elevators can only move in floors f0 and f10. The goal states are as shown: 
 
 - w1 at f10
@@ -73,7 +73,7 @@ Below an example trace of LAMA PLANNER is shown.
 * (put_worker_from_slow_in_floor slow2 w2 f10) 	GOAL STATE 	
 
 
-## Problem 2
+## Problem-2
 In this problem we have 21 floors, 8 workers 4 fast elevators and 4 slow elevators. We firstly initialize the positions of the elevators. All elevators are initially in floor f0. Then we initialize the positions of the workers. w1 in f0, w2 in f1, w3 in f2, w4 in f3, w5 in f4, w6 in f5, w7 in f6, w8 in f7.  The isNext predicate is used to let the domain know which floor follows the move of a slow elevator. isNext10 is used to let the domain know which floor follows after the move of a fast elevator. In the case of problem1 the fast elevators can move in floors f0, f10 and f20. The goal states are as shown: 
 
 - w1 in f10
